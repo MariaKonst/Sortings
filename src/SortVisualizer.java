@@ -15,33 +15,33 @@ public class SortVisualizer extends JFrame {
         sortAlgorithmComboBox = new JComboBox<>(new String[]{
                 "Bubble Sort", "Selection Sort", "Insertion Sort", "Merge Sort", "Quick Sort", "Heap Sort"
         });
-        sortAlgorithmComboBox.setBounds(100,50,100,100);
+        sortAlgorithmComboBox.setBounds(50,50,500,50);
         add(sortAlgorithmComboBox);
 
 
         //btn
         sortButton = new JButton("Sort");
         sortButton.addActionListener(this::sortButtonActionPerformed);
-        sortButton.setBounds(100,100,80,100);
+        sortButton.setBounds(600,50,100,50);
         add(sortButton);
 
         //sortpanel
         sortPanel = new SortPanel();
-        sortPanel.setBounds(200,300,100,100);
+        sortPanel.setBounds(100,100,500,500);
           add(sortPanel);
 
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Sort Visualizer");
+            SortVisualizer frame = new SortVisualizer();
 
-            frame.setSize(800, 600);
+            frame.setTitle("Sortings Visiualizer");
             frame.setVisible(true);
         });
     }
 
-    private void sortButtonActionPerformed(ActionEvent e) {
+    public void sortButtonActionPerformed(ActionEvent e) {
         String selectedSortAlgorithm = (String) sortAlgorithmComboBox.getSelectedItem();
         switch (selectedSortAlgorithm) {
             case "Bubble Sort":
