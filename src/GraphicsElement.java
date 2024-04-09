@@ -19,7 +19,11 @@ class GraphicsElement {
         return size;
     }
 
-    public void draw(Graphics g) {
-        g.drawImage(image, 50 + (size) * 30, 170, null);
+    /*public void draw(Graphics g) {
+        g.drawImage(image, 80 + (6-size) * 100, 170, null);
+    }*/
+
+    public Image getImage() {
+        return image;
     }
 }

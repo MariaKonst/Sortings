@@ -27,7 +27,7 @@ public class SortVisualizer extends JFrame {
 
         //sortpanel
         sortPanel = new SortPanel();
-        sortPanel.setBounds(100,100,500,500);
+        sortPanel.setBounds(0,100,800,500);
           add(sortPanel);
 
     }
@@ -76,6 +76,7 @@ public class SortVisualizer extends JFrame {
 
             }
         }
+sortPanel.removeAll();
 
         sortPanel.repaint();
     }
